@@ -11,3 +11,6 @@ Task: Currently, it is to create a program which has high accuracy in classifyin
 Issues: 
 - Descriptions of the post may be insufficient.
 - Keywords need to be excluded in order to filter more posts that in fact utilize chatGPT, rather than ones unrelated. 
+
+Solved Issues:
+- Sometimes, the openAI API would return a label in the incorrect format, like adding a period at the end of the label or including other formatting text. To fix this, I added a function to sanitize the responses.
