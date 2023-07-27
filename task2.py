@@ -10,13 +10,12 @@ keywords = ['chatGPT',
                  'GPT 3',
                  'gpt 3.5',
                  'gpt 4',
-                 'gpt',
                  'Codex',
                  'Copilot',
                  'AI generated code'
                 ]
 
-excludedWords = ["Seems you are using me but didn't get OPENAI_API_KEY seted in Variables"]
+excludedWords = ["Seems you are using me but didn't get OPENAI_API_KEY seted in Variables", "whisper"]
 ##Make github post
 ##Exclude more keywords
 ##Make document describing project
@@ -37,6 +36,24 @@ def contains_chinese(text):
         if '\u4e00' <= char <= '\u9fff':
             return True
     return False
+
+def informative_text(text):
+    if contains_chinese(text):
+        return False
+    
+    numSpaces = 0
+    # loop for search each index
+    for i in range(0, len(text)):
+        # Check each char
+        # is blank or not
+        if text[i] == " ":
+            numSpaces += 1
+
+    if len(text) < 30 or numSpaces < 4:
+        return False
+    
+    return True
+    
 
 def clean_Response(response):
     validFormat = False
@@ -65,7 +82,7 @@ for wantedPostType in postTypes:
                 text = post_list[0]['text']
                 html = post_list[0].get('html', '')
             
-                if post_type == wantedPostType and not contains_chinese(text):
+                if post_type == wantedPostType and informative_text(text):
                     containsKeyword = False
                     for i in keywords:
                         for j in excludedWords:
