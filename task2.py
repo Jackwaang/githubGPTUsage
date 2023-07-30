@@ -6,16 +6,15 @@ from datetime import datetime, timedelta
 openai.api_key = ''
 
 keywords = ['chatGPT',
-                 'OpenAI',
+                 'OpenAI API',
                  'GPT 3',
                  'gpt 3.5',
                  'gpt 4',
-                 'Codex',
-                 'Copilot',
+                 'github Copilot',
                  'AI generated code'
                 ]
 
-excludedWords = ["Seems you are using me but didn't get OPENAI_API_KEY seted in Variables", "whisper"]
+excludedWords = ["Seems you are using me but didn't get OPENAI_API_KEY seted in Variables", "whisper", ":robot: Release is at https://github.com/pionxzh/chatgpt-exporter/"]
 ##Make github post
 ##Exclude more keywords
 ##Make document describing project
@@ -26,7 +25,7 @@ label_choices = {
     '1. Code Generation': 'Criteria: Use this label only if the text indicates they Utilized chatGPT, GitHub Copilot, or codex to generate code for their project. Do not use this label just because the phrase \'code generation\' is mentioned. ',
     '2. Code Review': 'Criteria: Only use this label if text indicates that they utilized chatGPT to review format/style, find bugs in their code, or optimize their code',
     '3. Code summarization': 'Criteria: Only use this label if the text indicates that the poster utilized chatGPT to interpret a code\'s function',
-    '4. GPT Integration': 'Criteria: Use this label if text indicates they integrated gpt models, the openAI/chatgpt API, or github copilot into their own applications (discord bot, chat bot, etc.).',
+    '4. GPT Integration': 'Criteria: Use this label if text indicates they integrated gpt models, the openAI/chatgpt API, or github copilot into their own applications (discord bot, chat bot, etc.). A big clue for this is if API keys are mentioned.',
     '5. Test Case Generation': 'Criteria: Only use this label if the text indicates that they utilized chatGPT to generate test cases for their code',
     '6. Unrelated': 'Criteria: Always use this label unless it is clear that another label fits. Also, use this label for posts not in english. Otherwise, this is for posts using AI in other contexts unrelated to chatGPT, AI is not mentioned, or text does not provide enough information to fit the other labels. ',
 }
@@ -84,12 +83,17 @@ for wantedPostType in postTypes:
             
                 if post_type == wantedPostType and informative_text(text):
                     containsKeyword = False
+                    containsExcluded = False
                     for i in keywords:
-                        for j in excludedWords:
-                            if i.upper() in text.upper() and not (j.upper() in text.upper()):
-                                containsKeyword = True
-                                break
-                    if containsKeyword:
+                        if i.upper() in text.upper():
+                            containsKeyword = True
+                            break
+
+                    for j in excludedWords:
+                        if j.upper() in text.upper():
+                            containsExcluded = True
+
+                    if containsKeyword and not containsExcluded:
                         entry = {
                             'post_id': post_id,
                             'text': text,

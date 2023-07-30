@@ -19,8 +19,11 @@ for type in postTypes:
 
 numEqual = 0
 numUnrelated = 0
+#loop through nonopenai posts
 for i in range(0, (len(list1))):
+    #loop through manual labels
     for j in range(0, len(list1[i])):
+        #loop through labels in openaiGenerated file
         for k in range(0, len(list2[i])):
             if list1[i][j] == list2[i][k]:
                 numEqual += 1

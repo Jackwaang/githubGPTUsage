@@ -18,7 +18,6 @@ with open('stored_labels.txt') as file:
 #If not, have entry be unrelated.
 #Then, add entry to list of entries
 #after going through every line in file, write list of entries json dump to the non_openaigenerated file.
-
 for type in postTypes:
     entriesList = []
     file1name = type + '.txt'
@@ -36,9 +35,3 @@ for type in postTypes:
          for entry in entriesList:
               output.write(entry + '\n')
 
-
-        
-            
-with open('stored_labels.txt', 'w', encoding = 'utf-8', errors='ignore') as output:        
-    for entry in entriesList:
-        output.write(entry + '\n')
