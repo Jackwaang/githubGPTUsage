@@ -5,12 +5,12 @@ Task: Currently, it is to create a program that has high accuracy in classifying
 1. First, an extensive collection of GitHub posts are collected.
 2. A program is written to filter through those github posts containing specific keywords.
 3. I go through each post manually, and classify the post on how it utilizes chatGPT/ the open API with one of 6 labels:
-    '1. Code Generation': 'Criteria: Use this label only if the text indicates they Utilized chatGPT, GitHub Copilot, or codex to generate code for their project. Do not use this label just because the phrase \'code generation\' is mentioned. ',
-    '2. Code Review': 'Criteria: Only use this label if text indicates that they utilized chatGPT to review format/style, find bugs in their code, or optimize their code',
-    '3. Code summarization': 'Criteria: Only use this label if the text indicates that the poster utilized chatGPT to interpret a code\'s function',
-    '4. GPT Integration': 'Criteria: Use this label if text indicates they integrated gpt models, the openAI/chatgpt API, or github copilot into their own applications (discord bot, chat bot, etc.). A big clue for this is if API keys are mentioned.',
-    '5. Test Case Generation': 'Criteria: Only use this label if the text indicates that they utilized chatGPT to generate test cases for their code',
-    '6. Unrelated': 'Criteria: Always use this label unless it is clear that another label fits. Also, use this label for posts not in english. Otherwise, this is for posts using AI in other contexts unrelated to chatGPT, AI is not mentioned, or text does not provide enough information to fit the other labels. ',
+    1. Code Generation': 'Criteria: Use this label only if the text indicates they Utilized chatGPT, GitHub Copilot, or codex to generate code for their project. Do not use this label just because the phrase \'code generation\' is mentioned. ,
+    2. Code Review': 'Criteria: Only use this label if text indicates that they utilized chatGPT to review format/style, find bugs in their code, or optimize their code,
+    3. Code summarization': 'Criteria: Only use this label if the text indicates that the poster utilized chatGPT to interpret a code\'s function,
+    4. GPT Integration': 'Criteria: Use this label if text indicates they integrated gpt models, the openAI/chatgpt API, or github copilot into their own applications (discord bot, chat bot, etc.). A big clue for this is if API keys are mentioned.,
+    5. Test Case Generation': 'Criteria: Only use this label if the text indicates that they utilized chatGPT to generate test cases for their code,
+    6. Unrelated': 'Criteria: Always use this label unless it is clear that another label fits. Also, use this label for posts not in english. Otherwise, this is for posts using AI in other contexts unrelated to chatGPT, AI is not mentioned, or text does not provide enough information to fit the other labels. ,
 5. The openAI API is given a prompt for each post to classify it.
 6. The accuracy of each post type is measured.
 
