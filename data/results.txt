@@ -1,0 +1,49 @@
+For file type: issues
+1 posts are labeled as: Code Generation
+0 posts are labeled as: Code Review
+0 posts are labeled as: Code summarization
+36 posts are labeled as: GPT Integration
+1 posts are labeled as: Test Case Generation
+14 posts are labeled as: Unrelated
+of 50 posts of type issues
+For file type: issues_comment
+9 posts are labeled as: Code Generation
+3 posts are labeled as: Code Review
+0 posts are labeled as: Code summarization
+23 posts are labeled as: GPT Integration
+0 posts are labeled as: Test Case Generation
+15 posts are labeled as: Unrelated
+of 50 posts of type issues_comment
+For file type: pull
+3 posts are labeled as: Code Generation
+4 posts are labeled as: Code Review
+0 posts are labeled as: Code summarization
+32 posts are labeled as: GPT Integration
+0 posts are labeled as: Test Case Generation
+11 posts are labeled as: Unrelated
+of 50 posts of type pull
+For file type: pull_comment
+7 posts are labeled as: Code Generation
+0 posts are labeled as: Code Review
+0 posts are labeled as: Code summarization
+18 posts are labeled as: GPT Integration
+1 posts are labeled as: Test Case Generation
+25 posts are labeled as: Unrelated
+of 50 posts of type pull_comment
+For file type: pull_review_comment
+0 posts are labeled as: Code Generation
+1 posts are labeled as: Code Review
+0 posts are labeled as: Code summarization
+2 posts are labeled as: GPT Integration
+0 posts are labeled as: Test Case Generation
+3 posts are labeled as: Unrelated
+of 6 posts of type pull_review_comment
+For file type: commit_comment
+13 posts are labeled as: Code Generation
+1 posts are labeled as: Code Review
+0 posts are labeled as: Code summarization
+4 posts are labeled as: GPT Integration
+0 posts are labeled as: Test Case Generation
+10 posts are labeled as: Unrelated
+of 28 posts of type commit_comment
+129/234 are matching, 78/234 are Unrelated
