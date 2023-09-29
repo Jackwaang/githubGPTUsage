@@ -1,7 +1,7 @@
 # githubGPTUsage
 A Project utilizing the openAI API to examine how programmers are using chatGPT/the openAI API in their work.
 
-IMPORTANT: Selected_Conversations is too large to upload to github. If you would like this file, contact me. 
+IMPORTANT: Selected_Conversations is too large to upload to github. If you would like this file, contact me at wjackk@umich.edu. 
 
 Task: Currently, it is to create a program that has high accuracy in classifying a post on how it utilizes chatGPT based on its text. 
 1. First, an extensive collection of GitHub posts are collected.
