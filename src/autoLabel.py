@@ -5,7 +5,7 @@ from pathlib import Path
 current_directory = Path(__file__).resolve().parent
 parent_directory = current_directory.parent
 
-openai.api_key = ''
+openai.api_key = '' #TODO: INSERT YOUR API KEY
 
 keywords = ['chatGPT',
                  'OpenAI API',
