@@ -27,7 +27,8 @@ Solved Issues:
 
 
 File Purposes:
-- Task2.py: Create _openAIGenerated.txt files for each post type. This will generate a list of posts for each post type with labels selected by the openAI API.
+- manualLabel.py: A terminal interface to label posts without the risk of typos. 
+- autoLabel.py: Create _openAIGenerated.txt files for each post type. This will generate a list of posts for each post type with labels selected by the openAI API.
 - Accuracy.py: Compare the _openAIGenerated.txt files and the manually labeled files to determine the accuracy of the openAI API. Also prints out a summary based on the manual labels.
 - storeManualLabels.py: Stores the labels given in the manually labeled files.
 - applyManualLabels.py: Applies the labels stored in stored_labels.txt to the manually labeled files. 
