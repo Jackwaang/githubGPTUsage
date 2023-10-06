@@ -118,43 +118,23 @@ for wantedPostType in postTypes:
                         response = None
                         while True:
                             try:
-                                response = openai.ChatCompletion.create(
-                                    model="gpt-3.5-turbo",
-                                    messages=[
-                                    {"role": "user", "content": myPrompt}
-                                    ]
-                                )
+                                response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[ {"role": "user", "content": myPrompt}])
                                 break
                             except openai.error.RateLimitError:
                                 # Handle RateLimitError
                                 print("Rate limit reached. Waiting for the next available request slot...")
                                 time.sleep(30)  # Delay before making the next request
-                                response = openai.ChatCompletion.create(
-                                    model="gpt-3.5-turbo",
-                                    messages=[
-                                    {"role": "user", "content": myPrompt}
-                                    ]
-                                )
+                                response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[ {"role": "user", "content": myPrompt}])
                                 break
                             except openai.error.APIError:
                                 print("API Error. Delaying for another request...")
                                 time.sleep(30)  # Delay before making the next request
-                                response = openai.ChatCompletion.create(
-                                    model="gpt-3.5-turbo",
-                                    messages=[
-                                    {"role": "user", "content": myPrompt}
-                                    ]
-                                )
+                                response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[ {"role": "user", "content": myPrompt}])
                                 break
                             except openai.error.ServiceUnavailableError:
                                 print("Service Unavailable Error. Delaying for another request...")
                                 time.sleep(30)  # Delay before making the next request
-                                response = openai.ChatCompletion.create(
-                                    model="gpt-3.5-turbo",
-                                    messages=[
-                                    {"role": "user", "content": myPrompt}
-                                    ]
-                                )
+                                response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[ {"role": "user", "content": myPrompt}])
                                 break
                         newLabel = clean_Response(response.choices[0].message.content)
                         
